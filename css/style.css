@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* --- LAYOUT --- */
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;
+    margin: 20% auto;
+    box-shadow: 1px 3px 15px 2px hsl(218, 22%, 67%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.top-half{
+    padding: 3rem 2.5rem;
+}
+.bottom-half{
+    display: flex;
+    width: 100%;
+}
+.left-box, .right-box{
+    flex-grow: 2;
+    padding: 2.5rem 1.5rem;
+    min-width: fit-content;
+}
+.subscrip-price{
+    display: flex;
+    align-items: center;
+    margin-bottom: .7rem;
+}
+
+/* --- STYLE --- */
+body{
+    background-color: hsl(217, 100%, 91%);
+    font-family: 'Karla', 'Helvetica', sans-serif;
+}
+
+/* Top Section */
+.top-half{
+    background-color: rgb(244, 248, 255);
+}
+h1{
+    color:hsl(179, 62%, 43%);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.7rem;
+}
+.top-half > h2{
+    color: hsl(71, 73%, 54%);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.top-half > p{
+    color:hsl(218, 22%, 67%);
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+/* Bottom Section */
+.left-box{
+    background-color: hsl(179, 62%, 43%);
+    padding-left: 3rem;
+}
+.right-box{
+    background-color: hsl(188, 41%, 63%);
+    padding-left: 2.5rem;
+}
+.bottom-half h2{
+    color:hsl(217, 100%, 91%);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+}
+.bottom-half p, span, li{
+    color:hsl(217, 100%, 91%);
+}
+li{
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+ul{
+    padding: 0;
+}
+.price-amount{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-right: 1rem;
+}
+.bottom-half p{
+    margin-bottom: 1.5rem;
+}
+button{
+    color:rgb(244, 248, 255);
+    background-color: hsl(71, 73%, 54%);
+    padding: 1rem 6rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Karla', 'Helvetica', sans-serif;
+    box-shadow: 1px 2px 8px hsl(219, 7%, 49%);
+    transition-duration: .2s;
+}
+button:hover{
+    background-color: hsla(71, 70%, 40%, 0.467);
+}
+
+/* --- MEDIA QUERIES --- */
+@media all and (max-width: 450px){
+    .bottom-half{
+        flex-direction: column;
+    }
+    .card{
+        max-width: 375px;
+    }
+}
